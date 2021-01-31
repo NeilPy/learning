@@ -1,0 +1,7 @@
+def get_formatted_name(first, last, middel=''):
+    """Строит отформатированное полное имя."""
+    if middel:
+        full_name = first + ' ' + middel + ' ' + last
+    else:
+        full_name = first + ' ' + last
+    return full_name.title()

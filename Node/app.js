@@ -48,7 +48,7 @@ const server = http.createServer((req, res) => {
                     res.end('Create user request\n');
                     break;
                 }
-                default {
+                default: {
                     notFound(res);
                     break;
                 }
@@ -65,4 +65,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, host, () => {
     console.log(`Server listens http://${host}:${port}`);
-})
+});

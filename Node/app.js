@@ -11,5 +11,15 @@ function notFound(res){
 }
 
 const server = http.createServer((req, res) => {
-    switch(req.method) {}
+    switch(req.method) {
+        case 'GET': {
+            switch(req.url) {
+                case '/home': {
+                    res.statusCode = 200;
+                    res.setHeader('Content-Type', 'text/plain');
+                    res.end('Home page\n');
+                }
+            }
+        }
+    }
 })

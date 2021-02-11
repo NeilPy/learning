@@ -6,11 +6,13 @@ const handlebars = require('express-handlebars');
 const host = '127.0.0.1';
 const port = 8000;
 
+// метод engine задает настройки Node js Handlebars
 app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('views', './views');
 app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
+    // метод render принимает два параметра: шаблон, данные для шаблона в виде объекта
     res.render('home', {title: 'Greetings form Handlebars'});
 });
 
